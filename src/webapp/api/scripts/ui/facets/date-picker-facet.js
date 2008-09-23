@@ -145,6 +145,9 @@ Exhibit.DatePickerFacet.prototype.clearAllRestrictions = function() {
   }
   this._dom.range_min.value = "";
   this._dom.range_max.value = "";
+  
+  this._datePicker.update();
+  this._dom.setSelectionCount(this.hasRestrictions(), 0);
 
   return restrictions;
 };
@@ -177,8 +180,6 @@ Exhibit.DatePickerFacet.prototype._notifyCollection = function() {
 
 Exhibit.DatePickerFacet.prototype._clearSelections = function() {
   this.clearAllRestrictions();
-  this._datePicker.update();
-  this._dom.setSelectionCount(this.hasRestrictions(), 0);
 };
 
 Exhibit.DatePickerFacet.prototype.update = function(items) {

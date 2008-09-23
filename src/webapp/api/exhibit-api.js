@@ -23,7 +23,7 @@
             
         }
     }
-    
+
     var loadMe = function() {
         if (typeof window.Exhibit != "undefined") {
             return;
@@ -102,7 +102,6 @@
             "ui/widgets/legend-widget.js",
             "ui/widgets/legend-gradient-widget.js",
             "ui/widgets/option-widget.js",
-            "ui/widgets/scraper.js",
             "ui/widgets/toolbox-widget.js",
             
             "ui/views/view-panel.js",

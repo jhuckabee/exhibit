@@ -148,7 +148,6 @@ Exhibit.DatePickerFacet.DatePicker.prototype.buildCell = function(date, cssClass
                         ((date.getDay() == 0 || date.getDay() == 6) ? 'weekend' : ''), 
                         (this._facet.dateHasItems(date) ? 'has-items' : '')].join(' ');
   dom.elmt.id = Exhibit.DatePickerFacet.DateUtil.formatDate(date, self._facet._dateFormat).replace(/[^a-zA-Z 0-9]+/g,'');
-  dom.elmt.title = Exhibit.DatePickerFacet.DateUtil.formatDate(date, self._facet._dateFormat);
   if (self._facet._enableDragSelection){
     SimileAjax.WindowManager.registerEvent(dom.elmt, "mousedown", function(elmt, evt, target){
       self._facet.selectDate(Exhibit.DatePickerFacet.DateUtil.formatDate(date, self._facet._dateFormat));
