@@ -7,7 +7,8 @@ Exhibit.DatePickerFacet = function(containerElmt, uiContext) {
     this._div = containerElmt;
     this._uiContext = uiContext;
 
-    this._expression = null;
+    this._beginDate = null;
+    this._endDate = null;
     this._settings = {};
     this._dom = null;
     this._datePicker = null;
@@ -47,9 +48,18 @@ Exhibit.DatePickerFacet.createFromDOM = function(configElmt, containerElmt, uiCo
     Exhibit.SettingsUtilities.collectSettingsFromDOM(configElmt, Exhibit.DatePickerFacet._settingsSpecs, facet._settings);
 
     try {
-        var expressionString = Exhibit.getAttribute(configElmt, "expression");
-        if (expressionString != null && expressionString.length > 0) {
-            facet._expression = Exhibit.ExpressionParser.parse(expressionString);
+        var beginDateExpressionString = Exhibit.getAttribute(configElmt, "beginDate");
+        if (beginDateExpressionString != null && beginDateExpressionString.length > 0) {
+            facet._beginDate = Exhibit.ExpressionParser.parse(beginDateExpressionString);
+        }
+        
+        var endDateExpressionString = Exhibit.getAttribute(configElmt, "endDate");
+        if (endDateExpressionString != null && endDateExpressionString.length > 0) {
+            facet._endDate = Exhibit.ExpressionParser.parse(endDateExpressionString);
+        }
+        
+        if (facet._endDate == null) {
+          facet._endDate = facet.beginDate;
         }
         
         var timerLimit = Exhibit.getAttribute(configElmt, "timerLimit");
@@ -76,13 +86,13 @@ Exhibit.DatePickerFacet._configure = function(facet, configuration) {
     Exhibit.SettingsUtilities.collectSettings(configuration, Exhibit.DatePickerFacet._settingsSpecs, facet._settings);
 
     if ("expression" in configuration) {
-      facet._expression = Exhibit.ExpressionParser.parse(configuration.expression);
+      facet._beginDate = Exhibit.ExpressionParser.parse(configuration.expression);
     }
 
     if (!("facetLabel" in facet._settings)) {
       facet._settings.facetLabel = "missing ex:facetLabel";
-      if (facet._expression != null && facet._expression.isPath()) {
-        var segment = facet._expression.getPath().getLastSegment();
+      if (facet._beginDate != null && facet._beginDate.isPath()) {
+        var segment = facet._beginDate.getPath().getLastSegment();
         var property = facet._uiContext.getDatabase().getProperty(segment.property);
         if (property != null) {
           facet._settings.facetLabel = segment.forward ? property.getLabel() : property.getReverseLabel();
@@ -162,15 +172,68 @@ Exhibit.DatePickerFacet.prototype.restrict = function(items) {
       return items;
     }
     else{
-      var path = this._expression.getPath();
-      var database = this._uiContext.getDatabase();
-    
-      var set = new Exhibit.Set();
-      min = SimileAjax.DateTime.parseIso8601DateTime(this._range.min);
-      max = SimileAjax.DateTime.parseIso8601DateTime(this._range.max);
-      set.addSet(path.rangeBackward(min, max.setUTCDate(max.getUTCDate() + 1), false, items, database).values);
+      // Parse date range selection
+      var min = SimileAjax.DateTime.parseIso8601DateTime(this._range.min);
+      var max = SimileAjax.DateTime.parseIso8601DateTime(this._range.max);
+      
+      // Set number of days in facet heading
       this._dom.setSelectionCount(this.hasRestrictions(), Math.floor((max - min)/(24*60*60*1000)));
-      return set;
+      
+      // Reference db
+      var database = this._uiContext.getDatabase();
+      
+      // Check if we're setup for single date or a range
+      if (this._beginDate != null && this._endDate != null) {
+        // Using date range
+        var beginDateExpression = this._beginDate;
+        var endDateExpression = this._endDate;
+        
+        var set = new Exhibit.Set();
+        var allItems = this._uiContext.getCollection().getAllItems();
+        
+        // Round max up a day
+        SimileAjax.DateTime.incrementByInterval(max, SimileAjax.DateTime.DAY);
+        
+        // Check each item in the db
+        allItems.visit(function(item) {
+            // flag to indicate whether we've already added this item;
+            var added = false;
+            
+            // Capture the date values
+            var beginDateVal = beginDateExpression.evaluateOnItem(item, database);
+            var endDateVal = endDateExpression.evaluateOnItem(item, database);
+            
+            // Check the date to see if they are in range, add them to the set if so
+            if (beginDateVal.size > 0) {
+              var beginDate = SimileAjax.DateTime.parseIso8601DateTime(beginDateVal.values.toArray()[0]);
+              if (beginDate >= min && beginDate <= max) {
+                set.add(item);
+                added = true;
+              }
+            }
+            if (endDateVal.size > 0) {
+              var endDate = SimileAjax.DateTime.parseIso8601DateTime(endDateVal.values.toArray()[0]);
+              if (endDate >= min && endDate <= max && !added) {
+                set.add(item);
+                added = true;
+              }
+            }
+            if (beginDate && endDate && !added) {
+              if ((min >= beginDate && min <= endDate) || (max >= beginDate && max <= endDate)) {
+                set.add(item);
+              }
+            }
+        });
+        
+        return set;
+      }
+      else {
+        // Only using begin date
+        var path = this._beginDate.getPath();
+        var set = new Exhibit.Set();
+        set.addSet(path.rangeBackward(min, max.setUTCDate(max.getUTCDate() + 1), false, items, database).values);
+        return set; 
+      }
     }
 };
 
@@ -296,10 +359,52 @@ Exhibit.DatePickerFacet.prototype.selectRange = function(fromDate, toDate) {
 };
 
 Exhibit.DatePickerFacet.prototype.dateHasItems = function(date) {
-  var path = this._expression.getPath();
   var database = this._uiContext.getDatabase();
   var items = database.getAllItems();
+  
+  // Create to date to be next day from given date
   var toDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-  toDate = new Date(toDate.setDate(toDate.getDate()+1));
-  return path.rangeBackward(date, toDate, false, items, database).count > 0;
+  SimileAjax.DateTime.incrementByInterval(toDate, SimileAjax.DateTime.DAY);
+  
+  // Check if we're setup for single date or a range
+  if (this._beginDate != null && this._endDate != null) {
+    // Using date range
+    var beginDateExpression = this._beginDate;
+    var endDateExpression = this._endDate;
+    
+    itemsFound = false;
+    // Check each item in the db
+    items.visit(function(item) {
+      if (itemsFound) {
+        return;
+      }
+      // Capture the date values
+      var beginDateVal = beginDateExpression.evaluateOnItem(item, database);
+      var endDateVal = endDateExpression.evaluateOnItem(item, database);
+      
+      // Check the date to see if they are in range, add them to the set if so
+      if (beginDateVal.size > 0) {
+        var beginDate = SimileAjax.DateTime.parseIso8601DateTime(beginDateVal.values.toArray()[0]);
+        if (beginDate >= date && beginDate <= toDate) {
+          itemsFound = true;
+        }
+      }
+      if (endDateVal.size > 0) {
+        var endDate = SimileAjax.DateTime.parseIso8601DateTime(endDateVal.values.toArray()[0]);
+        if (endDate >= date && endDate <= toDate && !itemsFound) {
+          itemsFound = true;
+        }
+      }
+      if (beginDate && endDate && !itemsFound) {
+        if ((date >= beginDate && date <= endDate) || (toDate >= beginDate && toDate <= endDate)) {
+          itemsFound = true;
+        }
+      }
+    });
+    return itemsFound;
+  }
+  else {
+    var path = this._beginDate.getPath();
+    return path.rangeBackward(date, toDate, false, items, database).count > 0; 
+  }
 };
