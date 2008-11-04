@@ -128,7 +128,27 @@ Exhibit.CalendarView.prototype.dispose = function() {
 
 Exhibit.CalendarView.prototype._initializeUI = function() {
     var self = this;
-
+    
+    var template = {
+        elmt:       this._div,
+        className:  "exhibit-collectionView-header",
+        children: [
+            {   tag:    "div",
+                field:  "collectionSummaryDiv"
+            },
+            {   tag:    "div",
+                field:  "bodyDiv"
+            }
+        ]
+    };
+    this._dom = SimileAjax.DOM.createDOMFromTemplate(template);
+    
+    this._collectionSummaryWidget = Exhibit.CollectionSummaryWidget.create(
+        {}, 
+        this._dom.collectionSummaryDiv, 
+        this._uiContext
+    );
+    
     if (this._settings.showToolbox) {
         this._toolboxWidget = Exhibit.ToolboxWidget.createFromDOM(this._div, this._div, this._uiContext);
         this._toolboxWidget.getGeneratedHTML = function() {
@@ -147,7 +167,8 @@ Exhibit.CalendarView.prototype.browse = function(date) {
 }
 
 Exhibit.CalendarView.prototype._reconstruct = function() {
-    this._div.innerHTML = "";
+    var bodyDiv = this._dom.bodyDiv;
+    bodyDiv.innerHTML = "";
     
     var self = this;
     var collection = this._uiContext.getCollection();
@@ -226,7 +247,7 @@ Exhibit.CalendarView.prototype._reconstruct = function() {
     }
     
     this._div.style.display = "none";
-    this._div.appendChild(this.buildCal(events));
+    bodyDiv.appendChild(this.buildCal(events));
     this._div.style.display = "block";
 };
 
@@ -508,6 +529,6 @@ Exhibit.CalendarView.prototype._fillInfoBubble = function(elmt, itemIDs) {
   }
   
   SimileAjax.WindowManager.cancelPopups();
-  SimileAjax.Graphics.createBubbleForContentAndPoint(div, c.left + Math.ceil(elmt.offsetWidth / 2), c.top + Math.ceil(elmt.offsetHeight / 2), 400);
+  SimileAjax.Graphics.createBubbleForContentAndPoint(div, c.left + 25, c.top + Math.ceil(elmt.offsetHeight / 2), 400);
 
 };
