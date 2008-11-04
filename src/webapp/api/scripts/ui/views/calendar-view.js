@@ -433,9 +433,10 @@ Exhibit.CalendarView.prototype.buildCell = function(date, cssClass, items, itemI
       cell.className = 'event-title';
       cellLink = document.createElement('a');
       cellLink.href = 'javascript:{}';
+      cellLink.setAttribute('ex:itemID', item.itemID)
       cellLink.innerHTML = item.label;
       SimileAjax.WindowManager.registerEvent(cellLink, "click", function(elmt, evt, target){
-        self._fillInfoBubble(elmt, [item.itemID]);
+        self._fillInfoBubble(elmt, [elmt.getAttribute('ex:itemID')]);
         SimileAjax.DOM.cancelEvent(evt);
         return false;
       }, SimileAjax.WindowManager.getBaseLayer());
@@ -481,7 +482,7 @@ Exhibit.CalendarView.prototype._fillInfoBubble = function(elmt, itemIDs) {
     var durations = [];
     this._getDuration(itemIDs[0], database, function(duration) { if ("start" in duration) durations.push(duration); });
     var header = document.createElement('div');
-    header.innerHTML = durations[0].start;
+    header.innerHTML = Exhibit.DateUtil.formatDate(durations[0].start, 'E, MMM d, yyyy');
     header.className = 'event-list-header';
     div.appendChild(header);
 
@@ -494,8 +495,9 @@ Exhibit.CalendarView.prototype._fillInfoBubble = function(elmt, itemIDs) {
       var listItemLink = document.createElement('a');
       listItemLink.innerHTML = label;
       listItemLink.href = 'javascript:{}';
+      listItemLink.setAttribute('ex:itemID', itemID);
       SimileAjax.WindowManager.registerEvent(listItemLink, "click", function(elmt2, evt, target){
-        self._fillInfoBubble(elmt, [itemID]);
+        self._fillInfoBubble(elmt, [elmt2.getAttribute('ex:itemID')]);
         SimileAjax.DOM.cancelEvent(evt);
         return false;
       }, SimileAjax.WindowManager.getBaseLayer());
