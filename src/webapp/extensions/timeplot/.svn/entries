@@ -1,0 +1,49 @@
+8
+
+dir
+1589
+https://simile-widgets.googlecode.com/svn/exhibit/trunk/src/webapp/extensions/timeplot
+https://simile-widgets.googlecode.com/svn
+
+
+
+2008-04-29T00:30:55.810508Z
+1349
+ryanlee@csail.mit.edu
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+579c892a-5248-0410-a714-2bcf037eb5bf
+
+locales
+dir
+
+timeplot-extension.js
+file
+
+
+
+
+2008-08-01T03:41:55.000000Z
+0a56e4d230f626542c67672c084fdd7b
+2008-03-06T23:14:34.159300Z
+1283
+ryanlee
+
+styles
+dir
+
+scripts
+dir
+

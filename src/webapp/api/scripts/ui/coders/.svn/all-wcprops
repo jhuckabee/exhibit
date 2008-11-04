@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1222/exhibit/trunk/src/webapp/api/scripts/ui/coders
+END
+size-coder.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/scripts/ui/coders/size-coder.js
+END
+color-coder.js
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1219/exhibit/trunk/src/webapp/api/scripts/ui/coders/color-coder.js
+END
+default-color-coder.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1222/exhibit/trunk/src/webapp/api/scripts/ui/coders/default-color-coder.js
+END
+size-gradient-coder.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/scripts/ui/coders/size-gradient-coder.js
+END
+icon-coder.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/scripts/ui/coders/icon-coder.js
+END
+color-gradient-coder.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/1219/exhibit/trunk/src/webapp/api/scripts/ui/coders/color-gradient-coder.js
+END

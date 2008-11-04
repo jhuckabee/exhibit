@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/scripts/data/exporters
+END
+exhibit-json-exporter.js
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/scripts/data/exporters/exhibit-json-exporter.js
+END
+rdf-xml-exporter.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/scripts/data/exporters/rdf-xml-exporter.js
+END
+semantic-wikitext-exporter.js
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/scripts/data/exporters/semantic-wikitext-exporter.js
+END
+tsv-exporter.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/scripts/data/exporters/tsv-exporter.js
+END
+bibtex-exporter.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/scripts/data/exporters/bibtex-exporter.js
+END

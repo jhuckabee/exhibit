@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1446/exhibit/trunk/src/webapp/api/scripts/data/importers
+END
+html-table-importer.js
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/scripts/data/importers/html-table-importer.js
+END
+jsonp-importer.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1446/exhibit/trunk/src/webapp/api/scripts/data/importers/jsonp-importer.js
+END
+rdfa-importer.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/scripts/data/importers/rdfa-importer.js
+END
+babel-based-importer.js
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/1273/exhibit/trunk/src/webapp/api/scripts/data/importers/babel-based-importer.js
+END
+authenticated-importer.js
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/1422/exhibit/trunk/src/webapp/api/scripts/data/importers/authenticated-importer.js
+END
+exhibit-json-importer.js
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/scripts/data/importers/exhibit-json-importer.js
+END

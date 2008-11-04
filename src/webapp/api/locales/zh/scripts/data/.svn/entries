@@ -1,0 +1,40 @@
+8
+
+dir
+1589
+https://simile-widgets.googlecode.com/svn/exhibit/trunk/src/webapp/api/locales/zh/scripts/data
+https://simile-widgets.googlecode.com/svn
+
+
+
+2007-08-10T15:24:22.878402Z
+1019
+dfhuynh
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+579c892a-5248-0410-a714-2bcf037eb5bf
+
+database-l10n.js
+file
+
+
+
+
+2008-08-21T18:41:17.000000Z
+a46265146be8ef80b11082f2246d991e
+2007-08-10T15:24:22.878402Z
+1019
+dfhuynh
+

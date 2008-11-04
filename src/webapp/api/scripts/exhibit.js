@@ -78,7 +78,8 @@ Exhibit._initializeExporters = function() {
             Exhibit.RdfXmlExporter,
             Exhibit.SemanticWikitextExporter,
             Exhibit.TSVExporter,
-            Exhibit.ExhibitJsonExporter
+            Exhibit.ExhibitJsonExporter,
+            Exhibit.FacetSelectionExporter
         ];
     }
 };
@@ -296,6 +297,8 @@ Exhibit._Impl.prototype.configureFromDOM = function(root) {
     processElmts(facetElmts);
     processElmts(otherElmts);
     
+    this.importSettings();
+    
     var exporters = Exhibit.getAttribute(document.body, "exporters");
     if (exporters != null) {
         exporters = exporters.split(";");
@@ -361,24 +364,29 @@ Exhibit._Impl.prototype._showFocusDialogOnItem = function(itemID) {
 };
 
 Exhibit._Impl.prototype.exportSettings = function() {
-  var facetSelections = [],
+  var facetSelections = {},
       facetSettings = '';
   for (var id in this._componentMap) {
-    if (id.match(/facet/) && (typeof this._componentMap[id].exportSettings !== 'undefined')) {
-      facetSettings = this._componentMap[id].exportSettings() || false;
+    if (typeof this._componentMap[id].exportFacetSelection !== 'undefined') {
+      facetSettings = this._componentMap[id].exportFacetSelection() || false;
       if (facetSettings) {
-        facetSelections.push('"' + id + '": ' + facetSettings);
+        facetSelections[id] = facetSettings;
       }
     }
   }
-  return '{' + facetSelections.join(', ') + '}';
+  return facetSelections;
 };
 
-Exhibit._Impl.prototype.importSettings = function(settings) {
-  var facetSettings = eval('(' + settings + ')');
-  for (var id in facetSettings) {
-    if (this._componentMap[id] && (typeof this._componentMap[id].importSettings !== 'undefined')) {
-      this._componentMap[id].importSettings(facetSettings[id]);
+Exhibit._Impl.prototype.importSettings = function() {
+  if (window.location.search.length > 0) {
+    searchComponents = window.location.search.substr(1, window.location.search.length-1).split('&');
+    for(var x = 0; x < searchComponents.length; x++) {
+      var component = searchComponents[x].split('=');
+      var componentId = component[0];
+      var componentSelection = unescape(component[1]);
+      if (this._componentMap[componentId] && (typeof this._componentMap[componentId].importFacetSelection !== 'undefined')) {
+        this._componentMap[componentId].importFacetSelection(componentSelection);
+      }
     }
   }
 };

@@ -104,7 +104,7 @@ Exhibit.SettingsUtilities._parseSetting = function(s, type, spec) {
         if (sType == "number") {
             return Math.round(s);
         } else if (sType == "string") {
-            var n = parseInt(s);
+            var n = parseInt(s,10);
             if (!isNaN(n)) {
                 return n;
             }
@@ -367,7 +367,7 @@ Exhibit.SettingsUtilities._floatParser = function(v, f) {
 };
 
 Exhibit.SettingsUtilities._intParser = function(v, f) {
-    var n = parseInt(v);
+    var n = parseInt(v,10);
     if (!isNaN(n)) {
         return f(n);
     }

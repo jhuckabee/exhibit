@@ -1,0 +1,49 @@
+8
+
+dir
+1589
+https://simile-widgets.googlecode.com/svn/exhibit/trunk/src/webapp/api/locales/de/scripts
+https://simile-widgets.googlecode.com/svn
+
+
+
+2008-02-21T16:13:33.005057Z
+1262
+dfhuynh
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+579c892a-5248-0410-a714-2bcf037eb5bf
+
+exhibit-l10n.js
+file
+
+
+
+
+2008-08-21T18:42:31.000000Z
+4b3b74c5a56a769b3319fdc786335ab0
+2008-02-21T16:13:33.005057Z
+1262
+dfhuynh
+
+data
+dir
+
+ui
+dir
+
+util
+dir
+

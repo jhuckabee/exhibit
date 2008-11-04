@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/1587/ajax/trunk/src/webapp/api/scripts
+END
+html.js
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/1188/ajax/trunk/src/webapp/api/scripts/html.js
+END
+string.js
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/874/ajax/trunk/src/webapp/api/scripts/string.js
+END
+data-structure.js
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1188/ajax/trunk/src/webapp/api/scripts/data-structure.js
+END
+date-time.js
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1185/ajax/trunk/src/webapp/api/scripts/date-time.js
+END
+json.js
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/873/ajax/trunk/src/webapp/api/scripts/json.js
+END
+signal.js
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/873/ajax/trunk/src/webapp/api/scripts/signal.js
+END
+window-manager.js
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1023/ajax/trunk/src/webapp/api/scripts/window-manager.js
+END
+dom.js
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/1417/ajax/trunk/src/webapp/api/scripts/dom.js
+END
+jquery-1.2.6.js
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/1587/ajax/trunk/src/webapp/api/scripts/jquery-1.2.6.js
+END
+ajax.js
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/873/ajax/trunk/src/webapp/api/scripts/ajax.js
+END
+platform.js
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1261/ajax/trunk/src/webapp/api/scripts/platform.js
+END
+debug.js
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/873/ajax/trunk/src/webapp/api/scripts/debug.js
+END
+xmlhttp.js
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/954/ajax/trunk/src/webapp/api/scripts/xmlhttp.js
+END
+graphics.js
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1188/ajax/trunk/src/webapp/api/scripts/graphics.js
+END
+history.js
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/873/ajax/trunk/src/webapp/api/scripts/history.js
+END
+units.js
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/873/ajax/trunk/src/webapp/api/scripts/units.js
+END

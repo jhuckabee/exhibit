@@ -1,0 +1,54 @@
+8
+
+dir
+1589
+https://simile-widgets.googlecode.com/svn/exhibit/trunk/src/webapp/extensions/map/scripts
+https://simile-widgets.googlecode.com/svn
+
+
+
+2008-04-17T16:24:55.449429Z
+1338
+dfhuynh
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+579c892a-5248-0410-a714-2bcf037eb5bf
+
+map-view.js
+file
+
+
+
+
+2008-08-01T03:41:52.000000Z
+b2b6b76be8f1c6fd7085f76f2d6d8816
+2008-04-17T16:24:55.449429Z
+1338
+dfhuynh
+has-props
+
+vemap-view.js
+file
+
+
+
+
+2008-08-01T03:41:52.000000Z
+466f213a46243d3e951134730d0cfb25
+2007-08-30T19:09:12.834089Z
+1133
+dfhuynh
+has-props
+

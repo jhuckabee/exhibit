@@ -1,0 +1,118 @@
+8
+
+dir
+1589
+https://simile-widgets.googlecode.com/svn/exhibit/trunk/src/webapp/api/scripts/ui
+https://simile-widgets.googlecode.com/svn
+
+
+
+2008-08-22T07:16:38.328712Z
+1446
+sbostler
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+579c892a-5248-0410-a714-2bcf037eb5bf
+
+coders
+dir
+
+facets
+dir
+
+widgets
+dir
+
+ui.js
+file
+
+
+
+
+2008-08-21T19:19:01.000000Z
+db1d9e6863c94ceb60f9163c9a77f10c
+2008-08-15T06:11:12.488236Z
+1443
+sbostler
+has-props
+
+ui-context.js
+file
+
+
+
+
+2008-08-21T19:19:12.000000Z
+6d81381940d230aa5ecfc3ecd4bc0e5c
+2008-08-15T06:11:12.488236Z
+1443
+sbostler
+has-props
+
+lens.js
+file
+
+
+
+
+2008-08-25T16:03:07.000000Z
+652895692ad9f484b1029e3a951c3f3a
+2008-08-22T07:16:38.328712Z
+1446
+sbostler
+has-props
+
+views
+dir
+
+format-parser.js
+file
+
+
+
+
+2008-08-21T18:52:49.000000Z
+1eebef8e20b40c556d3b2b8efe7d022d
+2007-06-29T20:56:27.742578Z
+722
+dfhuynh
+has-props
+
+formatter.js
+file
+
+
+
+
+2008-08-21T18:52:49.000000Z
+441db571d4457f2392228705d4f90237
+2007-08-23T16:33:49.623731Z
+1107
+dfhuynh
+has-props
+
+coordinator.js
+file
+
+
+
+
+2008-08-21T18:52:49.000000Z
+0ca643d5ffbddd1f80a4104d34d0333c
+2007-08-09T17:07:40.092484Z
+1005
+dfhuynh
+has-props
+

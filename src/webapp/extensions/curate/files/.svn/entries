@@ -1,0 +1,56 @@
+8
+
+dir
+1589
+https://simile-widgets.googlecode.com/svn/exhibit/trunk/src/webapp/extensions/curate/files
+https://simile-widgets.googlecode.com/svn
+
+
+
+2008-08-08T23:12:27.320296Z
+1439
+sbostler
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+579c892a-5248-0410-a714-2bcf037eb5bf
+
+scraper.py
+file
+
+
+
+
+2008-08-01T03:41:47.000000Z
+33ca519b50ebd56cdab3df626aaed3f6
+2008-06-24T15:21:54.208304Z
+1416
+sbostler
+
+admin
+dir
+
+gdocbackend.py
+file
+
+
+
+
+2008-08-21T17:42:00.000000Z
+a40291088c5f3034e4b922396b520b20
+2008-08-08T23:12:27.320296Z
+1439
+sbostler
+has-props
+

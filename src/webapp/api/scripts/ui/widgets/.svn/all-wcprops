@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/1422/exhibit/trunk/src/webapp/api/scripts/ui/widgets
+END
+collection-summary-widget.js
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/scripts/ui/widgets/collection-summary-widget.js
+END
+toolbox-widget.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/scripts/ui/widgets/toolbox-widget.js
+END
+option-widget.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/scripts/ui/widgets/option-widget.js
+END
+legend-gradient-widget.js
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/scripts/ui/widgets/legend-gradient-widget.js
+END
+legend-widget.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/scripts/ui/widgets/legend-widget.js
+END
+logo.js
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/1413/exhibit/trunk/src/webapp/api/scripts/ui/widgets/logo.js
+END
+resizable-div-widget.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/scripts/ui/widgets/resizable-div-widget.js
+END

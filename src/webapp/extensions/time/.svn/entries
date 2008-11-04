@@ -1,0 +1,76 @@
+8
+
+dir
+1589
+https://simile-widgets.googlecode.com/svn/exhibit/trunk/src/webapp/extensions/time
+https://simile-widgets.googlecode.com/svn
+
+
+
+2008-06-21T11:41:11.289313Z
+1413
+sbostler
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+579c892a-5248-0410-a714-2bcf037eb5bf
+
+locales
+dir
+
+styles
+dir
+
+time-extension.js
+file
+
+
+
+
+2008-08-01T03:41:57.000000Z
+1c51eb50138ce5604bfb003912b2ffc9
+2007-07-09T02:23:28.379361Z
+769
+dfhuynh
+has-props
+
+time-extension-bundle.css
+file
+
+
+
+
+2008-08-21T19:33:50.000000Z
+7d28845ef5c9558cd2460e8b42e51e51
+2007-06-29T20:56:27.742578Z
+722
+dfhuynh
+has-props
+
+scripts
+dir
+
+time-extension-bundle.js
+file
+
+
+
+
+2008-08-21T19:33:50.000000Z
+f4fad54def7a1cb0b2a25889abbaf8ea
+2008-06-21T11:41:11.289313Z
+1413
+sbostler
+has-props
+

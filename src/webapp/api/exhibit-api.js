@@ -68,6 +68,7 @@
             "data/exporters/exhibit-json-exporter.js",
             "data/exporters/tsv-exporter.js",
             "data/exporters/bibtex-exporter.js",
+            "data/exporters/facet-selection-exporter.js",
             
             "ui/ui.js",
             "ui/ui-context.js",
@@ -87,7 +88,8 @@
       	    "ui/facets/date-picker-facet.js",
       	    "ui/facets/date-picker.js",
       	    "ui/facets/date-util.js",
-      	    "ui/facets/server-side-facet.js",
+      	    "ui/facets/remote-list-facet.js",
+      	    "ui/facets/alpha-range-facet.js",
             
             "ui/coders/color-coder.js",
             "ui/coders/default-color-coder.js",
@@ -109,7 +111,8 @@
             "ui/views/tile-view.js",
             "ui/views/thumbnail-view.js",
             "ui/views/tabular-view.js",
-            "ui/views/html-view.js"
+            "ui/views/html-view.js",
+            "ui/views/calendar-view.js"
         ];
         var cssFiles = [
             "exhibit.css",
@@ -128,7 +131,8 @@
             "views/view-panel.css",
             "views/tile-view.css",
             "views/thumbnail-view.css",
-            "views/tabular-view.css"
+            "views/tabular-view.css",
+            "views/calendar-view.css"
         ];
         
         var includeMap = false;

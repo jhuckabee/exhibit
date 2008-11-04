@@ -1,0 +1,41 @@
+8
+
+dir
+1589
+https://simile-widgets.googlecode.com/svn/exhibit/trunk/src/webapp/api/locales/en/scripts/ui/widgets
+https://simile-widgets.googlecode.com/svn
+
+
+
+2007-08-03T23:39:17.117073Z
+983
+dfhuynh
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+579c892a-5248-0410-a714-2bcf037eb5bf
+
+collection-summary-widget-l10n.js
+file
+
+
+
+
+2008-08-21T18:41:35.000000Z
+0c1001a8fe88253408f02a5478c64ab1
+2007-08-03T23:39:17.117073Z
+983
+dfhuynh
+has-props
+

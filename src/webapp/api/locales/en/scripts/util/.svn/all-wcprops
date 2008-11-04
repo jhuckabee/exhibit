@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/1219/exhibit/trunk/src/webapp/api/locales/en/scripts/util
+END
+views-l10n.js
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/locales/en/scripts/util/views-l10n.js
+END
+coders-l10n.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1219/exhibit/trunk/src/webapp/api/locales/en/scripts/util/coders-l10n.js
+END
+facets-l10n.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/locales/en/scripts/util/facets-l10n.js
+END

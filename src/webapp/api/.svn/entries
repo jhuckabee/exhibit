@@ -1,0 +1,91 @@
+8
+
+dir
+1589
+https://simile-widgets.googlecode.com/svn/exhibit/trunk/src/webapp/api
+https://simile-widgets.googlecode.com/svn
+
+
+
+2008-08-28T01:53:37.667829Z
+1458
+sbostler
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+579c892a-5248-0410-a714-2bcf037eb5bf
+
+locales
+dir
+
+styles
+dir
+
+images
+dir
+
+scripts
+dir
+
+exhibit-bundle.css
+file
+
+
+
+
+2008-08-21T19:33:50.000000Z
+7032ce5395b919b060cce3390299d1d2
+2008-05-26T15:04:53.251252Z
+1388
+jaresty
+has-props
+
+exhibit-api.js
+file
+
+
+
+
+2008-08-21T18:44:00.000000Z
+c98a1bd3e5ee0d52889c3e58ade9e17c
+2008-08-22T07:16:38.328712Z
+1446
+sbostler
+has-props
+
+manifest.json
+file
+
+
+
+
+2008-08-21T18:52:49.000000Z
+7c690f5404e3d9f097dd584d02b7f9d3
+2007-06-02T05:53:16.476874Z
+604
+oyasumi
+
+exhibit-bundle.js
+file
+
+
+
+
+2008-08-21T18:44:00.000000Z
+b0299a598251400aef2aff3eab9f5321
+2008-08-28T01:53:37.667829Z
+1458
+sbostler
+has-props
+

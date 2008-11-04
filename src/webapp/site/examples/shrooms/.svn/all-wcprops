@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/1389/exhibit/trunk/src/webapp/site/examples/shrooms
+END
+shrooms.json
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/1376/exhibit/trunk/src/webapp/site/examples/shrooms/shrooms.json
+END
+facets.n3
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/1375/exhibit/trunk/src/webapp/site/examples/shrooms/facets.n3
+END
+download_mushrooms.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/1367/exhibit/trunk/src/webapp/site/examples/shrooms/download_mushrooms.rb
+END
+dbpedia_query_fungi.sparql
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/1367/exhibit/trunk/src/webapp/site/examples/shrooms/dbpedia_query_fungi.sparql
+END
+shrooms.html
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/1389/exhibit/trunk/src/webapp/site/examples/shrooms/shrooms.html
+END

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/1390/exhibit/trunk/src/webapp/extensions/curate/files/admin
+END
+admin.py
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/1390/exhibit/trunk/src/webapp/extensions/curate/files/admin/admin.py
+END
+admin.css
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1390/exhibit/trunk/src/webapp/extensions/curate/files/admin/admin.css
+END
+exhibit.py
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/1390/exhibit/trunk/src/webapp/extensions/curate/files/admin/exhibit.py
+END
+public.py
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1390/exhibit/trunk/src/webapp/extensions/curate/files/admin/public.py
+END
+submissions.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1390/exhibit/trunk/src/webapp/extensions/curate/files/admin/submissions.js
+END
+submit.py
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/1390/exhibit/trunk/src/webapp/extensions/curate/files/admin/submit.py
+END
+admin.html
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/1390/exhibit/trunk/src/webapp/extensions/curate/files/admin/admin.html
+END
+portalocker.py
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/1390/exhibit/trunk/src/webapp/extensions/curate/files/admin/portalocker.py
+END

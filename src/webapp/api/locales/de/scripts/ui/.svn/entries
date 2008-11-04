@@ -1,0 +1,70 @@
+8
+
+dir
+1589
+https://simile-widgets.googlecode.com/svn/exhibit/trunk/src/webapp/api/locales/de/scripts/ui
+https://simile-widgets.googlecode.com/svn
+
+
+
+2008-02-21T16:13:33.005057Z
+1262
+dfhuynh
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+579c892a-5248-0410-a714-2bcf037eb5bf
+
+ui-context-l10n.js
+file
+
+
+
+
+2008-08-21T18:42:31.000000Z
+4d96e781436d08bffebcb15689efb8c5
+2008-02-21T16:13:33.005057Z
+1262
+dfhuynh
+
+lens-l10n.js
+file
+
+
+
+
+2008-08-21T18:42:31.000000Z
+4a24a34fa8fce7df0d1da8b358143055
+2008-02-21T16:13:33.005057Z
+1262
+dfhuynh
+
+widgets
+dir
+
+formatter-l10n.js
+file
+
+
+
+
+2008-08-21T18:42:31.000000Z
+6c7cfad739c26ae688f61ec660a2a0cc
+2008-02-21T16:13:33.005057Z
+1262
+dfhuynh
+
+views
+dir
+

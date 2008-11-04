@@ -1,0 +1,57 @@
+8
+
+dir
+1589
+http://simile-widgets.googlecode.com/svn/ajax/trunk/src/webapp/site
+http://simile-widgets.googlecode.com/svn
+
+
+
+2007-08-07T20:54:48.233242Z
+995
+masont
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+579c892a-5248-0410-a714-2bcf037eb5bf
+
+test.html
+file
+
+
+
+
+2008-08-01T04:09:31.000000Z
+bda4b02deae9dd5d2f83957a51dd8820
+2007-07-19T19:42:03.195742Z
+873
+dfhuynh
+has-props
+
+docs
+dir
+
+styles.css
+file
+
+
+
+
+2008-08-01T04:09:31.000000Z
+e2402cd5b79573257f5388541311cc67
+2007-07-19T19:42:03.195742Z
+873
+dfhuynh
+has-props
+

@@ -1,0 +1,88 @@
+8
+
+dir
+1589
+https://simile-widgets.googlecode.com/svn/exhibit/trunk/src/webapp/api/scripts
+https://simile-widgets.googlecode.com/svn
+
+
+
+2008-08-28T01:53:37.667829Z
+1458
+sbostler
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+579c892a-5248-0410-a714-2bcf037eb5bf
+
+persistence.js
+file
+
+
+
+
+2008-08-21T18:52:49.000000Z
+75e602682120cbe17495abbb4b5ed0f9
+2007-06-18T18:22:01.654028Z
+632
+dfhuynh
+has-props
+
+exhibit.js
+file
+
+
+
+
+2008-08-21T18:43:59.000000Z
+fff289bda35c7a118e77ade322ebba93
+2008-07-19T18:20:39.199495Z
+1426
+sbostler
+has-props
+
+data
+dir
+
+authentication.js
+file
+
+
+
+
+2008-08-21T18:43:59.000000Z
+38e1f464ef5db5ef32c53c41547eed73
+2008-08-06T22:08:37.622354Z
+1434
+sbostler
+
+util
+dir
+
+ui
+dir
+
+create.js
+file
+
+
+
+
+2008-08-21T19:06:51.000000Z
+47faf258677d3fef5896c08935302c7b
+2008-08-06T22:08:37.622354Z
+1434
+sbostler
+has-props
+

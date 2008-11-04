@@ -8,7 +8,7 @@ Exhibit.ExpressionParser = new Object();
 Exhibit.ExpressionParser.parse = function(s, startIndex, results) {
     startIndex = startIndex || 0;
     results = results || {};
-    
+
     var scanner = new Exhibit.ExpressionScanner(s, startIndex);
     try {
         return Exhibit.ExpressionParser._internalParse(scanner, false);

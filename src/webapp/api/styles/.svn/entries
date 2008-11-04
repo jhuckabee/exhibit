@@ -1,0 +1,76 @@
+8
+
+dir
+1589
+https://simile-widgets.googlecode.com/svn/exhibit/trunk/src/webapp/api/styles
+https://simile-widgets.googlecode.com/svn
+
+
+
+2008-05-26T15:04:53.251252Z
+1388
+jaresty
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+579c892a-5248-0410-a714-2bcf037eb5bf
+
+exhibit.css
+file
+
+
+
+
+2008-08-21T18:52:49.000000Z
+9abeb57579b9751ba853819e5befe2cd
+2007-10-19T01:49:34.881917Z
+1172
+dfhuynh
+has-props
+
+browse-panel.css
+file
+
+
+
+
+2008-08-21T18:52:49.000000Z
+3ff88a19aa1986908bbc08b4d9bdc370
+2007-04-03T23:09:02.000388Z
+534
+dfhuynh
+has-props
+
+widgets
+dir
+
+lens.css
+file
+
+
+
+
+2008-08-21T18:52:49.000000Z
+9dcd83bd4caac32fb36a1258b10a6cac
+2007-04-03T23:09:02.000388Z
+534
+dfhuynh
+has-props
+
+util
+dir
+
+views
+dir
+

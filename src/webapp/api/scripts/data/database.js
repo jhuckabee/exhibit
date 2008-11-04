@@ -480,7 +480,6 @@ Exhibit.Database._Impl.prototype._loadItem = function(itemEntry, indexFunction, 
         var uri = ("uri" in itemEntry) ? itemEntry.uri : (baseURI + "item#" + encodeURIComponent(id));
         var type = ("type" in itemEntry) ? itemEntry.type : "Item";
         
-        
         var isArray = function(obj) {
            if (obj.constructor.toString().indexOf("Array") == -1)
               return false;
@@ -983,7 +982,7 @@ Exhibit.Database._RangeIndex = function(items, getter) {
 };
 
 Exhibit.Database._RangeIndex.prototype.getCount = function() {
-    return this._pairs.count();
+    return this._pairs.length;
 };
 
 Exhibit.Database._RangeIndex.prototype.getMin = function() {

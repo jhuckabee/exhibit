@@ -1,0 +1,41 @@
+8
+
+dir
+1589
+https://simile-widgets.googlecode.com/svn/exhibit/trunk/src/webapp/extensions/time/locales/sv
+https://simile-widgets.googlecode.com/svn
+
+
+
+2007-06-29T20:56:27.742578Z
+722
+dfhuynh
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+579c892a-5248-0410-a714-2bcf037eb5bf
+
+time-locale.js
+file
+
+
+
+
+2008-08-01T03:41:56.000000Z
+5595b77272ffba98da31bbba0b2d97da
+2007-06-29T20:56:27.742578Z
+722
+dfhuynh
+has-props
+

@@ -1,0 +1,63 @@
+8
+
+dir
+1589
+http://simile-widgets.googlecode.com/svn/ajax/trunk/src/webapp/api
+http://simile-widgets.googlecode.com/svn
+
+
+
+2008-09-23T13:41:15.694654Z
+1588
+eob@mit.edu
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+579c892a-5248-0410-a714-2bcf037eb5bf
+
+images
+dir
+
+simile-ajax-api.js
+file
+
+
+
+
+2008-09-23T15:24:05.000000Z
+fbfa6ac9fe79c4728d32ad63208cbbfc
+2008-09-23T13:41:15.694654Z
+1588
+eob@mit.edu
+has-props
+
+simile-ajax-bundle.js
+file
+
+
+
+
+2008-08-01T04:09:37.000000Z
+ee27c7c5031b694a112c83179b692f18
+2008-09-23T13:41:15.694654Z
+1588
+eob@mit.edu
+has-props
+
+scripts
+dir
+
+content
+dir
+

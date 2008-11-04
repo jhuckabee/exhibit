@@ -1,0 +1,49 @@
+8
+
+dir
+1589
+https://simile-widgets.googlecode.com/svn/exhibit/trunk/src/webapp/api/locales
+https://simile-widgets.googlecode.com/svn
+
+
+
+2008-06-21T11:41:11.289313Z
+1413
+sbostler
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+579c892a-5248-0410-a714-2bcf037eb5bf
+
+zh
+dir
+
+en
+dir
+
+es
+dir
+
+fr
+dir
+
+sv
+dir
+
+de
+dir
+
+no
+dir
+

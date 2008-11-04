@@ -1,0 +1,55 @@
+8
+
+dir
+1589
+https://simile-widgets.googlecode.com/svn/exhibit/trunk/src/webapp/api/locales/no
+https://simile-widgets.googlecode.com/svn
+
+
+
+2008-04-08T05:29:50.595877Z
+1332
+haraldgroven
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+579c892a-5248-0410-a714-2bcf037eb5bf
+
+scripts
+dir
+
+exhibit-no-bundle.js
+file
+
+
+
+
+2008-08-21T18:42:42.000000Z
+7e66079f5a38b43b700f10bb19475471
+2008-04-08T05:29:50.595877Z
+1332
+haraldgroven
+
+locale.js
+file
+
+
+
+
+2008-08-21T18:42:42.000000Z
+1ac8e17b5b73eaaf4258f0ac1cb12156
+2008-04-08T04:11:09.045481Z
+1331
+haraldgroven
+

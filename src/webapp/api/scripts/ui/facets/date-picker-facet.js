@@ -40,35 +40,32 @@ Exhibit.DatePickerFacet.create = function(configuration, containerElmt, uiContex
 Exhibit.DatePickerFacet.createFromDOM = function(configElmt, containerElmt, uiContext) {
     var configuration = Exhibit.getConfigurationFromDOM(configElmt);
     var uiContext = Exhibit.UIContext.createFromDOM(configElmt, uiContext);
-    var facet = new Exhibit.DatePickerFacet(
-  	  containerElmt != null? containerElmt : configElmt,
-  	  uiContext
-    );
+    var facet = new Exhibit.DatePickerFacet((containerElmt !== null? containerElmt : configElmt), uiContext);
 
     Exhibit.SettingsUtilities.collectSettingsFromDOM(configElmt, Exhibit.DatePickerFacet._settingsSpecs, facet._settings);
 
     try {
         var beginDateExpressionString = Exhibit.getAttribute(configElmt, "beginDate");
-        if (beginDateExpressionString != null && beginDateExpressionString.length > 0) {
+        if (beginDateExpressionString !== null && beginDateExpressionString.length > 0) {
             facet._beginDate = Exhibit.ExpressionParser.parse(beginDateExpressionString);
         }
         
         var endDateExpressionString = Exhibit.getAttribute(configElmt, "endDate");
-        if (endDateExpressionString != null && endDateExpressionString.length > 0) {
+        if (endDateExpressionString !== null && endDateExpressionString.length > 0) {
             facet._endDate = Exhibit.ExpressionParser.parse(endDateExpressionString);
         }
         
-        if (facet._endDate == null) {
+        if (facet._endDate === null) {
           facet._endDate = facet.beginDate;
         }
         
         var timerLimit = Exhibit.getAttribute(configElmt, "timerLimit");
-        if (timerLimit != null && timerLimit.length > 0) {
+        if (timerLimit !== null && timerLimit.length > 0) {
             facet._datePickerTimerLimit = timerLimit;
         }
         
         var dragSelection = Exhibit.getAttribute(configElmt, "dragSelection");
-        if (dragSelection != null && dragSelection.length > 0) {
+        if (dragSelection !== null && dragSelection.length > 0) {
           facet._enableDragSelection = (dragSelection == "true");
         }
     } catch (e) {
@@ -91,10 +88,10 @@ Exhibit.DatePickerFacet._configure = function(facet, configuration) {
 
     if (!("facetLabel" in facet._settings)) {
       facet._settings.facetLabel = "missing ex:facetLabel";
-      if (facet._beginDate != null && facet._beginDate.isPath()) {
+      if (facet._beginDate !== null && facet._beginDate.isPath()) {
         var segment = facet._beginDate.getPath().getLastSegment();
         var property = facet._uiContext.getDatabase().getProperty(segment.property);
-        if (property != null) {
+        if (property !== null) {
           facet._settings.facetLabel = segment.forward ? property.getLabel() : property.getReverseLabel();
         }
       }
@@ -106,7 +103,7 @@ Exhibit.DatePickerFacet.prototype._initializeUI = function() {
     
     this._dom = this.constructFacetFrame(this._div, this._settings.facetLabel);
     
-    if (this._range.min != null && this._range.max != null) {
+    if (this._range.min !== null && this._range.max !== null) {
         this._dom.range_min.value = this._range.min;
         this._dom.range_max.value = this._range.max;
     }
@@ -144,7 +141,7 @@ Exhibit.DatePickerFacet.prototype.constructFacetFrame = function(div, facetLabel
 };
 
 Exhibit.DatePickerFacet.prototype.hasRestrictions = function() {
-  return (this._range.min != null && this._range.max != null);
+  return (this._range.min !== null && this._range.max !== null);
 };
 
 Exhibit.DatePickerFacet.prototype.clearAllRestrictions = function() {
@@ -183,7 +180,7 @@ Exhibit.DatePickerFacet.prototype.restrict = function(items) {
       var database = this._uiContext.getDatabase();
       
       // Check if we're setup for single date or a range
-      if (this._beginDate != null && this._endDate != null) {
+      if (this._beginDate !== null && this._endDate !== null) {
         // Using date range
         var beginDateExpression = this._beginDate;
         var endDateExpression = this._endDate;
@@ -252,12 +249,12 @@ Exhibit.DatePickerFacet.prototype.update = function(items) {
 Exhibit.DatePickerFacet.prototype._onDateFieldChange = function(elmt, evt) {
   
   if (this._dom.range_min.value && 
-      Exhibit.DatePickerFacet.DateUtil.parseDate(this._dom.range_min.value) &&
+      Exhibit.DateUtil.parseDate(this._dom.range_min.value) &&
       this._dom.range_max.value && 
-      Exhibit.DatePickerFacet.DateUtil.parseDate(this._dom.range_max.value)) {
+      Exhibit.DateUtil.parseDate(this._dom.range_max.value)) {
 
-    min_date = Exhibit.DatePickerFacet.DateUtil.parseDate(this._dom.range_min.value);
-    max_date = Exhibit.DatePickerFacet.DateUtil.parseDate(this._dom.range_max.value);
+    min_date = Exhibit.DateUtil.parseDate(this._dom.range_min.value);
+    max_date = Exhibit.DateUtil.parseDate(this._dom.range_max.value);
     
     if (min_date && max_date) {
       var self = this;
@@ -273,14 +270,11 @@ Exhibit.DatePickerFacet.prototype._onDateFieldChange = function(elmt, evt) {
                       max: this._dom.range_max.value};
 
       if (newRange.min != this._range.min || newRange.max != this._range.max) {
-          var self = this;
           var oldRange = this._range;
 
           SimileAjax.History.addLengthyAction(
               function() { self.setRange(newRange);self._datePicker.update(); },
-              function() { self.setRange(oldRange);self._datePicker.update(); },
-              "Clear date range search" //TODO: Internationalize
-          );
+              function() { self.setRange(oldRange);self._datePicker.update(); }, "Clear date range search"); //TODO: Internationalize
       }
     }
     
@@ -288,12 +282,12 @@ Exhibit.DatePickerFacet.prototype._onDateFieldChange = function(elmt, evt) {
 };
 
 Exhibit.DatePickerFacet.prototype.setRange = function(range) {
-    if (range.min != null && range.max != null) {
-        min_date = Exhibit.DatePickerFacet.DateUtil.parseDate(range.min);
-        max_date = Exhibit.DatePickerFacet.DateUtil.parseDate(range.max);
+    if (range.min !== null && range.max !== null) {
+        min_date = Exhibit.DateUtil.parseDate(range.min);
+        max_date = Exhibit.DateUtil.parseDate(range.max);
     
-        this._dom.range_min.value = Exhibit.DatePickerFacet.DateUtil.formatDate(min_date, this._dateFormat);
-        this._dom.range_max.value = Exhibit.DatePickerFacet.DateUtil.formatDate(max_date, this._dateFormat);
+        this._dom.range_min.value = Exhibit.DateUtil.formatDate(min_date, this._dateFormat);
+        this._dom.range_max.value = Exhibit.DateUtil.formatDate(max_date, this._dateFormat);
     }
 
     if (range.min != this._range.min || range.max != this._range.max) {
@@ -303,9 +297,9 @@ Exhibit.DatePickerFacet.prototype.setRange = function(range) {
 };
 
 Exhibit.DatePickerFacet.prototype.dateInCurrentRange = function(date) {
-  if (this._range.min != null && this._range.max != null) {
-      min_date = Exhibit.DatePickerFacet.DateUtil.parseDate(this._range.min);
-      max_date = Exhibit.DatePickerFacet.DateUtil.parseDate(this._range.max);
+  if (this._range.min !== null && this._range.max !== null) {
+      min_date = Exhibit.DateUtil.parseDate(this._range.min);
+      max_date = Exhibit.DateUtil.parseDate(this._range.max);
     return (date >= (min_date-24*60*60*1000)) && (date <= max_date);
   }
   else {
@@ -318,7 +312,7 @@ Exhibit.DatePickerFacet.prototype.dateRangeInCurrentRange = function(range) {
 };
 
 Exhibit.DatePickerFacet.prototype.changeDate = function(date) {
-  this._datePicker.update(Exhibit.DatePickerFacet.DateUtil.parseDate(date));
+  this._datePicker.update(Exhibit.DateUtil.parseDate(date));
 };
 
 Exhibit.DatePickerFacet.prototype.selectDate = function(date) {
@@ -328,20 +322,20 @@ Exhibit.DatePickerFacet.prototype.selectDate = function(date) {
     clearTimeout(this._datePickerTimer);
   }
   
-  if (this._dom.range_min.value.trim() != '' && this._dom.range_max.value.trim() != '') {
+  if (this._dom.range_min.value.trim() !== '' && this._dom.range_max.value.trim() !== '') {
     this._dom.range_min.value = '';
     this._dom.range_max.value = '';
   }
   
   // Start higlighting if this is the first date selection
-  if (this._dom.range_min.value.trim() == '' && this._dom.range_max.value.trim() == '') {
+  if (this._dom.range_min.value.trim() === '' && this._dom.range_max.value.trim() === '') {
     this._datePicker.startHighlighting(date);
     if(this._datePickerTimerLimit && !this._enableDragSelection) {
       this._datePickerTimer = setTimeout(function(){self.selectDate(self._dom.range_min.value);}, this._datePickerTimerLimit); 
     }
   }
   
-  if (this._dom.range_min.value.trim() == '') {
+  if (this._dom.range_min.value.trim() === '') {
     this._dom.range_min.value = date;
   }
   else{
@@ -367,7 +361,7 @@ Exhibit.DatePickerFacet.prototype.dateHasItems = function(date) {
   SimileAjax.DateTime.incrementByInterval(toDate, SimileAjax.DateTime.DAY);
   
   // Check if we're setup for single date or a range
-  if (this._beginDate != null && this._endDate != null) {
+  if (this._beginDate !== null && this._endDate !== null) {
     // Using date range
     var beginDateExpression = this._beginDate;
     var endDateExpression = this._endDate;
@@ -408,3 +402,17 @@ Exhibit.DatePickerFacet.prototype.dateHasItems = function(date) {
     return path.rangeBackward(date, toDate, false, items, database).count > 0; 
   }
 };
+
+Exhibit.DatePickerFacet.prototype.exportFacetSelection = function() { 
+  if (this._range.min && this._range.max) {
+    return this._range.min + ',' + this._range.max;
+  }
+}; 
+ 
+Exhibit.DatePickerFacet.prototype.importFacetSelection = function(settings) { 
+  var urlRange = settings.split(',');
+  if (urlRange.length > 1) {
+    this.setRange({min: urlRange[0], max: urlRange[1]});
+    this._datePicker.update();
+  }
+}

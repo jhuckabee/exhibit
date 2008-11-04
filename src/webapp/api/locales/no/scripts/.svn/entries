@@ -1,0 +1,49 @@
+8
+
+dir
+1589
+https://simile-widgets.googlecode.com/svn/exhibit/trunk/src/webapp/api/locales/no/scripts
+https://simile-widgets.googlecode.com/svn
+
+
+
+2008-04-08T04:11:09.045481Z
+1331
+haraldgroven
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+579c892a-5248-0410-a714-2bcf037eb5bf
+
+exhibit-l10n.js
+file
+
+
+
+
+2008-08-21T18:42:39.000000Z
+0a6d1819e7eef29be324cd688d5b8f7c
+2008-04-08T04:11:09.045481Z
+1331
+haraldgroven
+
+data
+dir
+
+ui
+dir
+
+util
+dir
+

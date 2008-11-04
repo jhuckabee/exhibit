@@ -1,0 +1,76 @@
+8
+
+dir
+1589
+https://simile-widgets.googlecode.com/svn/exhibit/trunk/src/webapp/extensions/map
+https://simile-widgets.googlecode.com/svn
+
+
+
+2008-06-21T11:41:11.289313Z
+1413
+sbostler
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+579c892a-5248-0410-a714-2bcf037eb5bf
+
+locales
+dir
+
+map-extension.js
+file
+
+
+
+
+2008-08-01T03:41:53.000000Z
+b9896de64f2808cce4a58e7ed3a6481b
+2007-10-17T19:44:18.046426Z
+1169
+dfhuynh
+has-props
+
+styles
+dir
+
+map-extension-bundle.css
+file
+
+
+
+
+2008-08-21T19:33:50.000000Z
+a6e3e398e91bb611d077215b1007b3c2
+2007-06-29T20:56:27.742578Z
+722
+dfhuynh
+has-props
+
+scripts
+dir
+
+map-extension-bundle.js
+file
+
+
+
+
+2008-08-21T19:33:50.000000Z
+4f82f3cf28a731d3a4e955dda44f5639
+2008-06-21T11:41:11.289313Z
+1413
+sbostler
+has-props
+

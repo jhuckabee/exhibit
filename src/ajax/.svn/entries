@@ -1,0 +1,34 @@
+8
+
+dir
+1589
+http://simile-widgets.googlecode.com/svn/ajax/trunk/src/webapp
+http://simile-widgets.googlecode.com/svn
+
+
+
+2008-09-23T13:41:15.694654Z
+1588
+eob@mit.edu
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+579c892a-5248-0410-a714-2bcf037eb5bf
+
+site
+dir
+
+api
+dir
+

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/1443/exhibit/trunk/src/webapp/api/scripts/ui/views
+END
+ordered-view-frame.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/scripts/ui/views/ordered-view-frame.js
+END
+tile-view.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/1440/exhibit/trunk/src/webapp/api/scripts/ui/views/tile-view.js
+END
+view-panel.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/1443/exhibit/trunk/src/webapp/api/scripts/ui/views/view-panel.js
+END
+thumbnail-view.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/scripts/ui/views/thumbnail-view.js
+END
+html-view.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/1209/exhibit/trunk/src/webapp/api/scripts/ui/views/html-view.js
+END
+tabular-view.js
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1338/exhibit/trunk/src/webapp/api/scripts/ui/views/tabular-view.js
+END
